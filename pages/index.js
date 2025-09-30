@@ -293,9 +293,11 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" style={{ padding: "1rem 0", backgroundColor: "#ffffff" }}>
         <h2 style={{ fontSize: "2.5rem", fontWeight: "900", margin: "1.5rem 0 1rem 0", textAlign: "center", color: "#000" }}>Projects</h2>
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "2rem", maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" }}>
+        <div className="projects-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: "1rem", maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
           {projects.map((p, i) => (
-            <ProjectCard key={i} {...p} />
+            <div className="project-grid-item" key={i} style={{ width: "100%" }}>
+              <ProjectCard {...p} />
+            </div>
           ))}
         </div>
       </section>
