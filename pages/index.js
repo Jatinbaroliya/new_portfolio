@@ -303,13 +303,13 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen py-20 px-4 md:px-8" style={{ background: "linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)", color: "#ffffff" }}>
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-black text-center mb-12" style={{ background: "linear-gradient(90deg, #00b4db, #0083b0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textShadow: "0 0 20px rgba(0, 180, 219, 0.5)" }}>About Me</h1>
+      <section id="about" className="min-h-screen py-20 w-full px-4 md:px-8" style={{ background: "linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%)", color: "#ffffff" }}>
+        <div className="">
+          <h1 className="text-3xl md:text-5xl font-black text-center h-30 flex items-center justify-center" style={{ background: "linear-gradient(90deg, #00b4db, #0083b0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textShadow: "0 0 20px rgba(0, 180, 219, 0.5)" }}>About Me</h1>
           
-          <div className="about-content flex flex-wrap items-center justify-center gap-12" style={{ animation: "fadeInUp 1s ease-out", maxWidth: "900px", margin: "0 auto" }}>
+          <div className="about-content flex flex-wrap items-center justify-around gap-10" style={{ animation: "fadeInUp 1s ease-out", maxWidth: "900px", margin: "0 auto" }}>
             {/* Personal Photo */}
-            <div className="photo-container" style={{ flex: "1", minWidth: "300px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <div className="photo-container flex flex-col items-center">
               <img
                 src="/photo.jpg"
                 alt="Jatin Baroliya"
@@ -318,19 +318,9 @@ export default function Home() {
                   height: "250px",
                   borderRadius: "50%",
                   boxShadow: "0 0 30px rgba(0, 180, 219, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.1)",
-                  border: "3px solid rgba(0, 180, 219, 0.3)",
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  animation: "float 3s ease-in-out infinite"
+                  border: "3px solid rgba(0, 180, 219, 0.3)"
                 }}
                 className="md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px]"
-                onMouseEnter={(e) => {
-                  e.target.style.transform = "scale(1.05) rotate(5deg)";
-                  e.target.style.boxShadow = "0 0 40px rgba(0, 180, 219, 0.8)";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.transform = "scale(1) rotate(0deg)";
-                  e.target.style.boxShadow = "0 0 30px rgba(0, 180, 219, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.1)";
-                }}
               />
               <h2 style={{
                 marginTop: "1rem",
@@ -344,13 +334,14 @@ export default function Home() {
             </div>
 
             {/* Bio and Socials */}
-            <div className="bio-socials md:ml-16" style={{ flex: "2", minWidth: "400px", maxWidth: "900px" }}>
+            <div className="bio-socials md:ml-16">
               {/* Bio Text */}
               <div className="bio-text" style={{ 
                 background: "rgba(255, 255, 255, 0.05)", 
                 backdropFilter: "blur(10px)", 
                 borderRadius: "15px", 
                 padding: "2rem", 
+                marginInline: "1rem",
                 marginBottom: "2rem", 
                 border: "1px solid rgba(255, 255, 255, 0.1)",
                 boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
@@ -363,33 +354,30 @@ export default function Home() {
                   textAlign: "justify",
                   whiteSpace: "pre-line"
                 }}>
-                  I’m Jatin Baroliya from Pali, Rajasthan, currently pursuing my B.Tech at IIIT Kota. I like solving problems and building projects that combine both software and practical applications.
-                  
-                  Recently, I completed an internship at ISRO, where I worked on an anomaly detection system for network traffic using deep learning where I used Python, TensorFlow, and other tools to analyze Zeek logs and detect unusual patterns on an Application interface.
-                  
-                  Apart from that, I’ve built projects like TrustPayHub, a secure online payment platform, and a Password Manager for safe credential storage. I’m comfortable with C++, JavaScript, Python and frameworks like React, Next.js, Node.js and mongo db.
-                  
-                  I’m also active on competitive coding platforms like LeetCode and GeeksforGeeks, where I’ve solved 700+ problems. Beyond academics, I lead video editing for the Neon Club at IIIT Kota and conducted video editing workshop in which 76 student participated, so this helps me balance my technical work with leadership and creativity.
+                  I’m Jatin Baroliya from Pali, Rajasthan, pursuing B.Tech at IIIT Kota. I enjoy problem-solving and building practical software projects. I recently interned at ISRO, where I developed a deep learning–based anomaly detection system for network traffic using Python and TensorFlow. 
+                  I’ve also built projects like **TrustPayHub** (a secure payment platform) and a **Password Manager**. Skilled in C++, Python, JavaScript, and frameworks like React, Next.js, Node.js, and MongoDB, I actively practice coding with 700+ problems solved on LeetCode and GeeksforGeeks. 
+                  Beyond academics, I lead video editing for the Neon Club and conducted a workshop with 76 participants, balancing my technical work with leadership and creativity.
+
                 </p>
               </div>
 
               {/* Social Media Links */}
-              <div className="social-links flex flex-wrap justify-center gap-4 md:gap-6" style={{ animation: "fadeIn 2s ease-out" }}>
-                <a 
-                  href="https://www.linkedin.com/in/jatin-baroliya-426b3b218/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
-                  target="_blank" 
+              <div className="social-links h-24 flex items-center justify-center gap-2 md:gap-6" style={{ animation: "fadeIn 2s ease-out", overflowX: "auto", maxWidth: "100%", WebkitOverflowScrolling: "touch" }}>
+                <a
+                  href="https://www.linkedin.com/in/jatin-baroliya-426b3b218/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    gap: "0.5rem", 
-                    padding: "0.75rem 1.5rem", 
-                    background: "linear-gradient(135deg, #0077b5, #00a0dc)", 
-                    color: "white", 
-                    textDecoration: "none", 
-                    borderRadius: "50px", 
-                    fontWeight: "600", 
-                    boxShadow: "0 4px 15px rgba(0, 119, 181, 0.4)", 
+                  className="flex-shrink-0 px-4 py-2 md:px-6 md:py-3"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    background: "linear-gradient(135deg, #0077b5, #00a0dc)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "50px",
+                    fontWeight: "600",
+                    boxShadow: "0 4px 15px rgba(0, 119, 181, 0.4)",
                     transition: "all 0.3s ease",
                     transform: "translateY(0)"
                   }}
@@ -405,21 +393,21 @@ export default function Home() {
                   <FaLinkedin size={20} />
                   LinkedIn
                 </a>
-                <a 
-                  href="https://github.com/Jatinbaroliya" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/Jatinbaroliya"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    gap: "0.5rem", 
-                    padding: "0.75rem 1.5rem", 
-                    background: "linear-gradient(135deg, #333, #555)", 
-                    color: "white", 
-                    textDecoration: "none", 
-                    borderRadius: "50px", 
-                    fontWeight: "600", 
-                    boxShadow: "0 4px 15px rgba(51, 51, 51, 0.4)", 
+                  className="flex-shrink-0 px-4 py-2 md:px-6 md:py-3"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    background: "linear-gradient(135deg, #333, #555)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "50px",
+                    fontWeight: "600",
+                    boxShadow: "0 4px 15px rgba(51, 51, 51, 0.4)",
                     transition: "all 0.3s ease",
                     transform: "translateY(0)"
                   }}
@@ -435,21 +423,21 @@ export default function Home() {
                   <FaGithub size={20} />
                   GitHub
                 </a>
-                <a 
-                  href="https://www.instagram.com/_jatinbaroliya/?igsh=NnoxbGRxOTludDlt#" 
-                  target="_blank" 
+                <a
+                  href="https://www.instagram.com/_jatinbaroliya/?igsh=NnoxbGRxOTludDlt#"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  style={{ 
-                    display: "flex", 
-                    alignItems: "center", 
-                    gap: "0.5rem", 
-                    padding: "0.75rem 1.5rem", 
-                    background: "linear-gradient(135deg, #e4405f, #f77737)", 
-                    color: "white", 
-                    textDecoration: "none", 
-                    borderRadius: "50px", 
-                    fontWeight: "600", 
-                    boxShadow: "0 4px 15px rgba(228, 64, 95, 0.4)", 
+                  className="flex-shrink-0 px-4 py-2 md:px-6 md:py-3"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    background: "linear-gradient(135deg, #e4405f, #f77737)",
+                    color: "white",
+                    textDecoration: "none",
+                    borderRadius: "50px",
+                    fontWeight: "600",
+                    boxShadow: "0 4px 15px rgba(228, 64, 95, 0.4)",
                     transition: "all 0.3s ease",
                     transform: "translateY(0)"
                   }}
