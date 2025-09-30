@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Home() {
-  const texts = ["Hey I'm a MERN stack developer.", "Hey I'm a programmer.", "Hey I'm a machine learning enthusiast."];
+  const texts = ["Hey I'm a MERN stack developer.", "Hey I'm a programmer.", "Hey I'm a ML enthusiast."];
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
@@ -164,7 +164,7 @@ export default function Home() {
               <div style={{ color: "#569cd6", fontWeight: "bold" }}>{"}"};</div>
             </div>
           </div>
-          <div className="image-section">
+          <div className="image-section" style={{ paddingLeft: "1rem", paddingRight: "1rem", marginLeft: "auto", marginRight: "auto" }}>
           <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Programmer coding" style={{ width: "100%", maxWidth: "600px", height: "auto", maxHeight: "450px", borderRadius: "10px", boxShadow: "0 4px 20px rgba(0,0,0,0.2)" }} />
           </div>
         </div>
@@ -173,7 +173,7 @@ export default function Home() {
       {/* Skills and Education Section */}
       <section className="skills-section pt-16 pb-16">
         <div className="skills-education-container">
-          <div className="skills-container">
+          <div className="skills-container order-2 md:order-1">
             <h1>Skills</h1>
             <div className="skills-grid grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
               <div className="skill-badge">
@@ -238,7 +238,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="education-container">
+          <div className="education-container order-1 md:order-2">
             <h1>Education</h1>
             <div className="education-grid">
               <div className="education-badge">
