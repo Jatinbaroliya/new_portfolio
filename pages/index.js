@@ -267,9 +267,9 @@ export default function Home() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: "3rem", maxWidth: "1200px", margin: "0 auto", padding: "0 2rem 2rem 2rem", justifyContent: "center" }}>
           <div className="experience-item" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <img src="/isro_logo.jpg" alt="ISRO" className="experience-icon" />
-            <div className="experience-text">th 
+            <div className="experience-text">
               <h3 className="experience-title">AI/ML Intern - ISRO, Ahmedabad</h3>
-              <ul className="experience-bullets-list">
+              <ul className="experience-bullets-list text">
                 <li>Completed internship from May – July 2025. Worked on Anomaly Detection in Network Logs, where I designed and implemented deep learning models to identify unusual traffic patterns.</li>
                 <li>Developed a complete end-to-end framework combining Python, TensorFlow, and Web technologies to make the solution practical and user-friendly for real-world scenarios.</li>
               </ul>
@@ -279,7 +279,7 @@ export default function Home() {
           <div className="experience-item" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <img src="/neon.jpg" alt="Neon Club" className="experience-icon" />
             <div className="experience-text">
-              <h3 className="experience-title">Video Editing Lead — Neon Club, IIIT Kota (2023 – 2024)</h3>
+              <h3 className="experience-title">Video Editing Lead : Neon Club, IIIT Kota (2023 – 2024)</h3>
               <p className="experience-description">Video Editor, Kota, Rajasthan</p>
               <ul className="experience-bullets-list">
                 <li>Led video editing initiatives for Neon Club, IIIT Kota, creating engaging and high-quality content for events, workshops, and social media outreach.</li>
