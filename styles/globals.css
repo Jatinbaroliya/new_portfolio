@@ -233,15 +233,10 @@ html {
 
 /* Skills section */
 .skills-section {
-  min-height: 100vh;
-  padding: 4rem 2rem;
+  padding: 2rem 0;
   background: linear-gradient(135deg, #f0f8ff, #e6f3ff, #d1ecf1, #bee5eb);
   background-size: 400% 400%;
   animation: futuristicBg 15s ease infinite;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: relative;
   overflow: hidden;
 }
@@ -288,35 +283,26 @@ html {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 2rem;
-  max-width: 950px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 100%;
   width: 100%;
   padding: 1rem;
   position: relative;
   z-index: 1;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
   .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    padding: 0.5rem;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    padding: 0.25rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -324,7 +310,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.8);
   border: 2px solid transparent;
   border-radius: 12px;
@@ -334,18 +320,12 @@ html {
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
-  min-height: 120px;
+  min-height: 100px;
   justify-content: center;
+  aspect-ratio: 1;
 }
 
 @media (max-width: 768px) {
-  .skill-badge {
-    padding: 1rem;
-    min-height: 100px;
-  }
-}
-
-@media (max-width: 480px) {
   .skill-badge {
     padding: 0.75rem;
     min-height: 90px;
@@ -400,7 +380,7 @@ html {
 }
 
 .skill-icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
   filter: drop-shadow(0 0 5px rgba(0,0,0,0.2));
   animation: iconPulse 4s ease-in-out infinite;
@@ -408,7 +388,7 @@ html {
 
 @media (max-width: 768px) {
   .skill-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 0.25rem;
   }
 }
@@ -429,12 +409,12 @@ html {
   font-weight: 600;
   color: #000;
   text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
   .skill-name {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -756,12 +736,20 @@ html {
 .education-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 700px;
+  gap: 1rem;
+  max-width: 100%;
   width: 100%;
   padding: 1rem;
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 700px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -860,12 +848,20 @@ html {
 /* Skills and Education container */
 .skills-education-container {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   width: 100%;
   max-width: 1600px;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .skills-education-container {
+    flex-direction: row;
+    gap: 3rem;
+    padding: 0 2rem;
+  }
 }
 
 .skills-container,

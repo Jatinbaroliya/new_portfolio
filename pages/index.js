@@ -171,11 +171,11 @@ export default function Home() {
       </section>
 
       {/* Skills and Education Section */}
-      <section className="skills-section pt-16 pb-16">
+      <section className="skills-section">
         <div className="skills-education-container">
-          <div className="skills-container order-2 md:order-1">
-            <h1>Skills</h1>
-            <div className="skills-grid grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+          <div className="skills-container">
+            <h2 className="section-title">Skills</h2>
+            <div className="skills-grid">
               <div className="skill-badge">
                 <FaHtml5 className="skill-icon" style={{color: "#e34f26"}} />
                 <span className="skill-name">HTML</span>
@@ -238,8 +238,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="education-container order-1 md:order-2">
-            <h1>Education</h1>
+          <div className="education-container">
+            <h2 className="section-title">Education</h2>
             <div className="education-grid">
               <div className="education-badge">
                 <img src="/iiit kota logo.png" alt="IIIT Kota" className="education-icon" style={{width: "2.5rem", height: "2.5rem"}} />
