@@ -305,9 +305,18 @@ html {
 
 @media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0.25rem;
   }
 }
 
@@ -327,6 +336,20 @@ html {
   overflow: hidden;
   min-height: 120px;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .skill-badge {
+    padding: 1rem;
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-badge {
+    padding: 0.75rem;
+    min-height: 90px;
+  }
 }
 
 .skill-badge::after {
@@ -383,6 +406,20 @@ html {
   animation: iconPulse 4s ease-in-out infinite;
 }
 
+@media (max-width: 768px) {
+  .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-icon {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
 @keyframes iconPulse {
   0%, 100% { filter: drop-shadow(0 0 5px rgba(0,0,0,0.2)); }
   50% { filter: drop-shadow(0 0 10px rgba(0,0,0,0.3)) brightness(1.1); }
@@ -393,6 +430,18 @@ html {
   color: #000;
   text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
   font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .skill-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-name {
+    font-size: 0.9rem;
+  }
 }
 
 /* Enhanced ProjectCard styles */
@@ -715,6 +764,21 @@ html {
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+  .education-grid {
+    gap: 1rem;
+    padding: 0.5rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-grid {
+    gap: 0.75rem;
+    padding: 0.25rem;
+  }
+}
+
 .education-badge {
   display: flex;
   flex-direction: column;
@@ -801,6 +865,7 @@ html {
   max-width: 1600px;
   justify-content: center;
   align-items: flex-start;
+  flex-direction: row;
 }
 
 .skills-container,
@@ -809,6 +874,22 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 0;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) {
+  .skills-education-container {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0 1rem;
+  }
+  
+  .skills-container,
+  .education-container {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .section-heading {
