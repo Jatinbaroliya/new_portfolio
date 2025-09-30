@@ -175,66 +175,66 @@ export default function Home() {
         <div className="skills-education-container">
           <div className="skills-container">
             <h2 className="section-title">Skills</h2>
-            <div className="skills-grid">
-              <div className="skill-badge">
-                <FaHtml5 className="skill-icon" style={{color: "#e34f26"}} />
-                <span className="skill-name">HTML</span>
+            <div className="skills-grid" style={{gap: "0.5rem", padding: "1rem"}}>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaHtml5 className="skill-icon" style={{color: "#e34f26", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>HTML</span>
               </div>
-              <div className="skill-badge">
-                <FaCss3 className="skill-icon" style={{color: "#1572b6"}} />
-                <span className="skill-name">CSS</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaCss3 className="skill-icon" style={{color: "#1572b6", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>CSS</span>
               </div>
-              <div className="skill-badge">
-                <FaJsSquare className="skill-icon" style={{color: "#f7df1e"}} />
-                <span className="skill-name">JavaScript</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaJsSquare className="skill-icon" style={{color: "#f7df1e", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>JavaScript</span>
               </div>
-              <div className="skill-badge">
-                <FaReact className="skill-icon" style={{color: "#61dafb"}} />
-                <span className="skill-name">React.js</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaReact className="skill-icon" style={{color: "#61dafb", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>React.js</span>
               </div>
-              <div className="skill-badge">
-                <FaNodeJs className="skill-icon" style={{color: "#339933"}} />
-                <span className="skill-name">Node.js</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaNodeJs className="skill-icon" style={{color: "#339933", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>Node.js</span>
               </div>
-              <div className="skill-badge">
-                <FaDatabase className="skill-icon" style={{color: "#47a248"}} />
-                <span className="skill-name">MongoDB</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaDatabase className="skill-icon" style={{color: "#47a248", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>MongoDB</span>
               </div>
-              <div className="skill-badge">
-                <FaBolt className="skill-icon" style={{color: "#000000"}} />
-                <span className="skill-name">Next.js</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaBolt className="skill-icon" style={{color: "#000000", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>Next.js</span>
               </div>
-              <div className="skill-badge">
-                <FaServer className="skill-icon" style={{color: "#000000"}} />
-                <span className="skill-name">Express</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaServer className="skill-icon" style={{color: "#000000", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>Express</span>
               </div>
-              <div className="skill-badge">
-                <FaPython className="skill-icon" style={{color: "#3776ab"}} />
-                <span className="skill-name">Python</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaPython className="skill-icon" style={{color: "#3776ab", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>Python</span>
               </div>
-              <div className="skill-badge">
-                <FaBrain className="skill-icon" style={{color: "#ff6b35"}} />
-                <span className="skill-name">Machine Learning</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaBrain className="skill-icon" style={{color: "#ff6b35", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>Machine Learning</span>
               </div>
-              <div className="skill-badge">
-                <FaDatabase className="skill-icon" style={{color: "#336791"}} />
-                <span className="skill-name">SQL</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaDatabase className="skill-icon" style={{color: "#336791", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>SQL</span>
               </div>
-              <div className="skill-badge">
-                <FaCode className="skill-icon" style={{color: "#00599c"}} />
-                <span className="skill-name">C++</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaCode className="skill-icon" style={{color: "#00599c", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>C++</span>
               </div>
-              <div className="skill-badge">
-                <FaCode className="skill-icon" style={{color: "#a8b9cc"}} />
-                <span className="skill-name">C</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaCode className="skill-icon" style={{color: "#a8b9cc", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>C</span>
               </div>
-              <div className="skill-badge">
-                <FaGit className="skill-icon" style={{color: "#f05032"}} />
-                <span className="skill-name">Git</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaGit className="skill-icon" style={{color: "#f05032", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>Git</span>
               </div>
-              <div className="skill-badge">
-                <FaGithub className="skill-icon" style={{color: "#333"}} />
-                <span className="skill-name">GitHub</span>
+              <div className="skill-badge" style={{padding: "0.1rem", minHeight: "80px"}}>
+                <FaGithub className="skill-icon" style={{color: "#333", fontSize: "2.2rem", marginBottom: "0.4rem"}} />
+                <span className="skill-name" style={{fontSize: "1rem"}}>GitHub</span>
               </div>
             </div>
           </div>
