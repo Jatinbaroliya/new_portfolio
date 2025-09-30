@@ -334,7 +334,7 @@ export default function Home() {
             </div>
 
             {/* Bio and Socials */}
-            <div className="bio-socials md:ml-16">
+            <div className="bio-socials md:ml-16 flex flex-col justify-center items-center">
               {/* Bio Text */}
               <div className="bio-text" style={{ 
                 background: "rgba(255, 255, 255, 0.05)", 
@@ -362,96 +362,78 @@ export default function Home() {
               </div>
 
               {/* Social Media Links */}
-              <div className="social-links h-24 flex items-center justify-center gap-2 md:gap-6" style={{ animation: "fadeIn 2s ease-out", overflowX: "auto", maxWidth: "100%", WebkitOverflowScrolling: "touch" }}>
+              <div className="flex flex-row gap-6 justify-center mb-6" style={{ animation: "fadeIn 2s ease-out" }}>
                 <a
                   href="https://www.linkedin.com/in/jatin-baroliya-426b3b218/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 px-4 py-2 md:px-6 md:py-3"
+                  className="flex items-center justify-center gap-3 text-white font-semibold rounded-full shadow-md transition-transform duration-300 ease-in-out w-12 h-12 md:w-[140px] md:h-[48px]"
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.5rem",
-                    background: "linear-gradient(135deg, #0077b5, #00a0dc)",
-                    color: "white",
-                    textDecoration: "none",
-                    borderRadius: "50px",
-                    fontWeight: "600",
+                    backgroundColor: "#0077b5",
                     boxShadow: "0 4px 15px rgba(0, 119, 181, 0.4)",
-                    transition: "all 0.3s ease",
-                    transform: "translateY(0)"
+                    textDecoration: "none",
+                    userSelect: "none",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.transform = "translateY(-3px)";
-                    e.target.style.boxShadow = "0 6px 20px rgba(0, 119, 181, 0.6)";
+                    e.currentTarget.style.transform = "translateY(-3px)";
+                    e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 119, 181, 0.6)";
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.transform = "translateY(0)";
-                    e.target.style.boxShadow = "0 4px 15px rgba(0, 119, 181, 0.4)";
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 119, 181, 0.4)";
                   }}
                 >
-                  <FaLinkedin size={20} />
-                  LinkedIn
+                  <FaLinkedin size={24} />
+                  <span className="hidden md:inline">LinkedIn</span>
                 </a>
                 <a
                   href="https://github.com/Jatinbaroliya"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 px-4 py-2 md:px-6 md:py-3"
+                  className="flex items-center justify-center gap-3 text-white font-semibold rounded-full shadow-md transition-transform duration-300 ease-in-out w-12 h-12 md:w-[140px] md:h-[48px]"
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.5rem",
-                    background: "linear-gradient(135deg, #333, #555)",
-                    color: "white",
-                    textDecoration: "none",
-                    borderRadius: "50px",
-                    fontWeight: "600",
+                    backgroundColor: "#333",
                     boxShadow: "0 4px 15px rgba(51, 51, 51, 0.4)",
-                    transition: "all 0.3s ease",
-                    transform: "translateY(0)"
+                    textDecoration: "none",
+                    userSelect: "none",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.transform = "translateY(-3px)";
-                    e.target.style.boxShadow = "0 6px 20px rgba(51, 51, 51, 0.6)";
+                    e.currentTarget.style.transform = "translateY(-3px)";
+                    e.currentTarget.style.boxShadow = "0 6px 20px rgba(51, 51, 51, 0.6)";
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.transform = "translateY(0)";
-                    e.target.style.boxShadow = "0 4px 15px rgba(51, 51, 51, 0.4)";
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 15px rgba(51, 51, 51, 0.4)";
                   }}
                 >
-                  <FaGithub size={20} />
-                  GitHub
+                  <FaGithub size={24} />
+                  <span className="hidden md:inline">GitHub</span>
                 </a>
                 <a
                   href="https://www.instagram.com/_jatinbaroliya/?igsh=NnoxbGRxOTludDlt#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 px-4 py-2 md:px-6 md:py-3"
+                  className="flex items-center justify-center gap-3 text-white font-semibold rounded-full shadow-md transition-transform duration-300 ease-in-out w-12 h-12 md:w-[140px] md:h-[48px]"
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.5rem",
-                    background: "linear-gradient(135deg, #e4405f, #f77737)",
-                    color: "white",
-                    textDecoration: "none",
-                    borderRadius: "50px",
-                    fontWeight: "600",
+                    background: "linear-gradient(135deg, #f58529, #dd2a7b, #8134af)",
                     boxShadow: "0 4px 15px rgba(228, 64, 95, 0.4)",
-                    transition: "all 0.3s ease",
-                    transform: "translateY(0)"
+                    textDecoration: "none",
+                    userSelect: "none",
+                    cursor: "pointer",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.transform = "translateY(-3px)";
-                    e.target.style.boxShadow = "0 6px 20px rgba(228, 64, 95, 0.6)";
+                    e.currentTarget.style.transform = "translateY(-3px)";
+                    e.currentTarget.style.boxShadow = "0 6px 20px rgba(228, 64, 95, 0.6)";
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.transform = "translateY(0)";
-                    e.target.style.boxShadow = "0 4px 15px rgba(228, 64, 95, 0.4)";
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 15px rgba(228, 64, 95, 0.4)";
                   }}
                 >
-                  <FaInstagram size={20} />
-                  Instagram
+                  <FaInstagram size={24} />
+                  <span className="hidden md:inline">Instagram</span>
                 </a>
               </div>
             </div>
@@ -462,7 +444,7 @@ export default function Home() {
           @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
-          }0
+          }
           @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
