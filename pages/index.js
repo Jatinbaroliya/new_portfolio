@@ -355,7 +355,7 @@ export default function Home() {
                   whiteSpace: "pre-line"
                 }}>
                   I’m Jatin Baroliya from Pali, Rajasthan, pursuing B.Tech at IIIT Kota. I enjoy problem-solving and building practical software projects. I recently interned at ISRO, where I developed a deep learning–based anomaly detection system for network traffic using Python and TensorFlow. 
-                  I’ve also built projects like **TrustPayHub** (a secure payment platform) and a **Password Manager**. Skilled in C++, Python, JavaScript, and frameworks like React, Next.js, Node.js, and MongoDB, I actively practice coding with 700+ problems solved on LeetCode and GeeksforGeeks. 
+                  I’ve also built projects like TrustPayHub (a secure payment platform) and a Password Manager. Skilled in C++, Python, JavaScript, and frameworks like React, Next.js, Node.js, and MongoDB, I actively practice coding with 700+ problems solved on LeetCode and GeeksforGeeks. 
                   Beyond academics, I lead video editing for the Neon Club and conducted a workshop with 76 participants, balancing my technical work with leadership and creativity.
 
                 </p>
