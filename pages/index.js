@@ -108,8 +108,8 @@ export default function Home() {
     {
       title: "Personal Portfolio",
       description: "Developed a modern personal portfolio website using Next.js, React, and Tailwind CSS, showcasing skills, projects, and experience with interactive animations and responsive design.",
-      repoLink: "#",
-      liveLink: "#",
+      repoLink: "https://github.com/Jatinbaroliya/new_portfolio",
+      liveLink: "https://jatinbaroliya.vercel.app/",
       image: "/portfolio.png",
       languages: ["Next.js", "React", "Tailwind CSS"]
     },
