@@ -457,7 +457,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="min-h-screen py-16 px-4 md:px-8" style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", color: "#ffffff", position: "relative", overflow: "hidden" }}>
+      <section id="contact" className="min-h-screen py-16 px-4 md:px-8 flex justify-center items-center" style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", color: "#ffffff"}}>
         <div style={{
           position: "absolute",
           top: 0,
@@ -485,9 +485,9 @@ export default function Home() {
               position: "absolute",
               width: "4px",
               height: "4px",
-              background: "#ffffff",
+              background: "#00ffff",
               borderRadius: "50%",
-              opacity: 0.6,
+              opacity: 0.8,
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animation: `floatParticle ${3 + Math.random() * 5}s ease-in-out infinite`,
@@ -495,11 +495,11 @@ export default function Home() {
             }}></div>
           ))}
         </div>
-        <div className="max-w-4xl mx-auto" style={{ position: "relative", zIndex: 1 }}>
-          <h1 className="section-heading text-center mb-12" style={{ fontSize: "3rem", fontWeight: "900", background: "linear-gradient(90deg, #ff6b35, #f7931e)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textShadow: "0 0 20px rgba(255, 107, 53, 0.5)", animation: "glow 2s ease-in-out infinite alternate, bounceIn 1s ease-out" }}>Contact Me</h1>
+        <div className="min-w-4/5 sm:min-w-lg md:min-w-xl lg:min-w-4xl max-w-6xl mx-auto">
+          <h1 className="section-heading text-center mb-12" style={{ fontSize: "3rem", fontWeight: "900", background: "linear-gradient(90deg, #00ffff, #8a2be2)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textShadow: "0 0 20px rgba(0, 255, 255, 0.7)", animation: "glow 2s ease-in-out infinite alternate, bounceIn 1s ease-out" }}>Contact Me</h1>
 
-          <div className="contact-form-container" style={{ display: "flex", justifyContent: "center" }}>
-            <form onSubmit={handleSubmit} style={{
+          <div className="contact-form-container">
+            <form className="w-full" onSubmit={handleSubmit} style={{
               background: "rgba(255, 255, 255, 0.1)",
               backdropFilter: "blur(10px)",
               borderRadius: "15px",
@@ -507,10 +507,9 @@ export default function Home() {
               border: "1px solid rgba(255, 255, 255, 0.2)",
               boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
               width: "100%",
-              maxWidth: "700px",
               animation: "fadeIn 1s ease-out"
             }}>
-              <div style={{ marginBottom: "1rem" }}>
+              <div style={{ marginBottom: "1.5rem" }}>
                 <label htmlFor="name" style={{ display: "block", marginBottom: "0.5rem", color: "#e0e0e0", fontWeight: "600" }}>Name</label>
                 <input
                   type="text"
@@ -525,18 +524,20 @@ export default function Home() {
                     width: "100%",
                     padding: "1rem",
                     borderRadius: "8px",
-                    border: focus.name ? "2px solid #ff6b35 !important" : "2px solid #ffffff !important",
+                    border: focus.name ? "2px solid #00ffff" : "2px solid #ffffff",
                     background: "rgba(255, 255, 255, 0.15)",
                     color: "#ffffff",
                     fontSize: "1rem",
                     outline: "none",
-                    transition: "border-color 0.3s ease, box-shadow 0.3s ease",
-                    boxShadow: focus.name ? "0 0 0 3px rgba(255, 107, 53, 0.3) !important" : "0 2px 10px rgba(0, 0, 0, 0.1) !important"
+                    transition: "all 0.3s ease",
+                    boxShadow: focus.name ? "0 0 15px rgba(0, 255, 255, 0.8)" : "0 2px 10px rgba(0, 0, 0, 0.1)"
                   }}
+                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = "0 0 15px rgba(0, 255, 255, 0.5)"}
+                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = focus.name ? "0 0 15px rgba(0, 255, 255, 0.8)" : "0 2px 10px rgba(0, 0, 0, 0.1)"}
                 />
               </div>
 
-              <div style={{ marginBottom: "1rem" }}>
+              <div style={{ marginBottom: "1.5rem" }}>
                 <label htmlFor="email" style={{ display: "block", marginBottom: "0.5rem", color: "#e0e0e0", fontWeight: "600" }}>Email</label>
                 <input
                   type="email"
@@ -551,14 +552,16 @@ export default function Home() {
                     width: "100%",
                     padding: "1rem",
                     borderRadius: "8px",
-                    border: focus.email ? "3px solid #ff6b35 !important" : "3px solid #ffffff !important",
+                    border: focus.email ? "2px solid #00ffff" : "2px solid #ffffff",
                     background: "rgba(255, 255, 255, 0.15)",
                     color: "#ffffff",
                     fontSize: "1rem",
                     outline: "none",
-                    transition: "border-color 0.3s ease, box-shadow 0.3s ease",
-                    boxShadow: focus.email ? "0 0 0 4px rgba(255, 107, 53, 0.4) !important" : "0 2px 10px rgba(0, 0, 0, 0.1) !important"
+                    transition: "all 0.3s ease",
+                    boxShadow: focus.email ? "0 0 15px rgba(0, 255, 255, 0.8)" : "0 2px 10px rgba(0, 0, 0, 0.1)"
                   }}
+                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = "0 0 15px rgba(0, 255, 255, 0.5)"}
+                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = focus.email ? "0 0 15px rgba(0, 255, 255, 0.8)" : "0 2px 10px rgba(0, 0, 0, 0.1)"}
                 />
               </div>
 
@@ -577,22 +580,24 @@ export default function Home() {
                     width: "100%",
                     padding: "1rem",
                     borderRadius: "8px",
-                    border: focus.message ? "2px solid #ff6b35" : "2px solid #ffffff",
+                    border: focus.message ? "2px solid #00ffff" : "2px solid #ffffff",
                     background: "rgba(255, 255, 255, 0.15)",
                     color: "#ffffff",
                     fontSize: "1rem",
                     outline: "none",
                     resize: "vertical",
-                    transition: "border-color 0.3s ease, box-shadow 0.3s ease",
-                    boxShadow: focus.message ? "0 0 0 3px rgba(255, 107, 53, 0.3)" : "0 2px 10px rgba(0, 0, 0, 0.1)"
+                    transition: "all 0.3s ease",
+                    boxShadow: focus.message ? "0 0 15px rgba(0, 255, 255, 0.8)" : "0 2px 10px rgba(0, 0, 0, 0.1)"
                   }}
+                  onMouseEnter={(e) => e.currentTarget.style.boxShadow = "0 0 15px rgba(0, 255, 255, 0.5)"}
+                  onMouseLeave={(e) => e.currentTarget.style.boxShadow = focus.message ? "0 0 15px rgba(0, 255, 255, 0.8)" : "0 2px 10px rgba(0, 0, 0, 0.1)"}
                 ></textarea>
               </div>
 
               <button type="submit" style={{
                 width: "100%",
                 padding: "0.75rem",
-                background: "linear-gradient(135deg, #ff6b35, #f7931e)",
+                background: "linear-gradient(135deg, #00ffff, #8a2be2)",
                 color: "white",
                 border: "none",
                 borderRadius: "8px",
@@ -600,21 +605,21 @@ export default function Home() {
                 fontWeight: "600",
                 cursor: "pointer",
                 transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                boxShadow: "0 4px 15px rgba(255, 107, 53, 0.4)"
+                boxShadow: "0 0 15px rgba(0, 255, 255, 0.7)"
               }}
               onMouseEnter={(e) => {
                 e.target.style.transform = "translateY(-2px)";
-                e.target.style.boxShadow = "0 6px 20px rgba(255, 107, 53, 0.6)";
+                e.target.style.boxShadow = "0 0 25px rgba(0, 255, 255, 1)";
               }}
               onMouseLeave={(e) => {
                 e.target.style.transform = "translateY(0)";
-                e.target.style.boxShadow = "0 4px 15px rgba(255, 107, 53, 0.4)";
+                e.target.style.boxShadow = "0 0 15px rgba(0, 255, 255, 0.7)";
               }}
               >
                 Send Message
               </button>
 
-              {status && <p style={{ marginTop: "1rem", textAlign: "center", color: status === 'Sending...' ? '#ff6b35' : status.includes('Error') ? '#ff4444' : '#4CAF50' }}>{status}</p>}
+              {status && <p style={{ marginTop: "1rem", textAlign: "center", color: status === 'Sending...' ? '#00ffff' : status.includes('Error') ? '#ff4444' : '#4CAF50' }}>{status}</p>}
         </form>
           </div>
         </div>
