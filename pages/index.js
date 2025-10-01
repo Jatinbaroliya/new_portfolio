@@ -458,46 +458,8 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen py-16 px-4 md:px-8 flex justify-center items-center" style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", color: "#ffffff"}}>
-        <div style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundImage: "url('https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 0.1,
-          zIndex: 0,
-          animation: "bgMove 20s ease-in-out infinite"
-        }}></div>
-        {/* Floating particles */}
-        <div style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: 0
-        }}>
-          {[...Array(10)].map((_, i) => (
-            <div key={i} style={{
-              position: "absolute",
-              width: "4px",
-              height: "4px",
-              background: "#00ffff",
-              borderRadius: "50%",
-              opacity: 0.8,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `floatParticle ${3 + Math.random() * 5}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`
-            }}></div>
-          ))}
-        </div>
         <div className="min-w-4/5 sm:min-w-lg md:min-w-xl lg:min-w-4xl max-w-6xl mx-auto">
-          <h1 className="section-heading text-center mb-12" style={{ fontSize: "3rem", fontWeight: "900", background: "linear-gradient(90deg, #00ffff, #8a2be2)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textShadow: "0 0 20px rgba(0, 255, 255, 0.7)", animation: "glow 2s ease-in-out infinite alternate, bounceIn 1s ease-out" }}>Contact Me</h1>
-
+          <h1 className="section-heading text-center mb-12" style={{ fontSize: "3rem", fontWeight: "900", background: "linear-gradient(90deg, #00ffff, #8a2be2)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textShadow: "0 0 20px rgba(0, 255, 255, 0.7)"}}>Contact Me</h1>
           <div className="contact-form-container">
             <form className="w-full" onSubmit={handleSubmit} style={{
               background: "rgba(255, 255, 255, 0.1)",
@@ -522,7 +484,7 @@ export default function Home() {
                   required
                   style={{
                     width: "100%",
-                    padding: "1rem",
+                    padding: "0.7rem",
                     borderRadius: "8px",
                     border: focus.name ? "2px solid #00ffff" : "2px solid #ffffff",
                     background: "rgba(255, 255, 255, 0.15)",
@@ -550,7 +512,7 @@ export default function Home() {
                   required
                   style={{
                     width: "100%",
-                    padding: "1rem",
+                    padding: "0.7rem",
                     borderRadius: "8px",
                     border: focus.email ? "2px solid #00ffff" : "2px solid #ffffff",
                     background: "rgba(255, 255, 255, 0.15)",
