@@ -683,9 +683,9 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm">&copy; 2024 Jatin Baroliya. All rights reserved.</p>
+      <footer className="text-white py-8 px-4 items-center justify-center">
+        <div className="max-w-full mx-auto text-center my-4">
+          <p className="text-sm">&copy; 2025 Jatin Baroliya. All rights reserved.</p>
           <div className="flex justify-center gap-6 mt-4">
             <a href="https://github.com/Jatinbaroliya" className="text-gray-400 hover:text-white transition-colors">GitHub</a>
             <a href="https://linkedin.com/in/jatinbaroliya" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
