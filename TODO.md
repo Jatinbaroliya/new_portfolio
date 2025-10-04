@@ -1,8 +1,7 @@
-# Contact Form Redesign TODO
+# TODO: Add "Read More" Option to About Me Description for Mobile View
 
-## Tasks
-- [x] Update "Contact Me" heading gradient to cyan-to-purple
-- [x] Change input focus glow from orange to cyan
-- [x] Update "Send Message" button gradient to cyan-to-purple
-- [ ] Test the contact section by running dev server and verifying visual and functional aspects
-- [ ] Verify responsiveness on different screen sizes
+- [x] Add state variables `isExpanded` and `isMobile` using useState
+- [ ] Add useEffect to detect mobile screen size (window.innerWidth < 768)
+- [ ] Define `fullText` and `truncatedText` from the bio content
+- [ ] Modify the bio paragraph to conditionally render truncated or full text based on mobile and expanded state
+- [ ] Add "Read More"/"Read Less" button visible only on mobile screens

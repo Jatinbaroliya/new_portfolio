@@ -16,6 +16,8 @@ export default function Home() {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
   const [focus, setFocus] = useState({ name: false, email: false, message: false });
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const current = texts[textIndex];
@@ -52,6 +54,13 @@ export default function Home() {
       }
     }, 150);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const handleSubmit = async (e) => {
@@ -347,18 +356,29 @@ export default function Home() {
                 boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
                 animation: "fadeIn 1.5s ease-out"
               }}>
-                <p style={{ 
-                  lineHeight: "1.8", 
-                  fontSize: "1.1rem", 
-                  color: "#e0e0e0", 
-                  textAlign: "justify",
-                  whiteSpace: "pre-line"
-                }}>
-                  I’m Jatin Baroliya from Pali, Rajasthan, pursuing B.Tech at IIIT Kota. I enjoy problem-solving and building practical software projects. I recently interned at ISRO, where I developed a deep learning–based anomaly detection system for network traffic using Python and TensorFlow. 
-                  I’ve also built projects like TrustPayHub (a secure payment platform) and a Password Manager. Skilled in C++, Python, JavaScript, and frameworks like React, Next.js, Node.js, and MongoDB, I actively practice coding with 700+ problems solved on LeetCode and GeeksforGeeks. 
-                  Beyond academics, I lead video editing for the Neon Club and conducted a workshop with 76 participants, balancing my technical work with leadership and creativity.
-
-                </p>
+              <p style={{ 
+                lineHeight: "1.8", 
+                fontSize: "1.1rem", 
+                color: "#e0e0e0", 
+                textAlign: "justify",
+                whiteSpace: "pre-line"
+              }}>
+                {isMobile && !isExpanded ? (
+                  <>
+                    I’m Jatin Baroliya from Pali, Rajasthan, pursuing B.Tech at IIIT Kota. I enjoy problem-solving and building practical software projects. I recently interned at ISRO, where I developed a deep learning–based anomaly detection system for network traffic using Python and TensorFlow. 
+                    I’ve also built projects like TrustPayHub (a secure payment platform) and a Password Manager. Skilled in C++, Python, JavaScript, and frameworks like React, Next.js, Node.js, and MongoDB
+                    ...
+                    <button onClick={() => setIsExpanded(true)} style={{ background: "none", border: "none", color: "#00b4db", cursor: "pointer", fontWeight: "bold", marginLeft: "0.5rem" }}>Read More</button>
+                  </>
+                ) : (
+                  <>
+                    I’m Jatin Baroliya from Pali, Rajasthan, pursuing B.Tech at IIIT Kota. I enjoy problem-solving and building practical software projects. I recently interned at ISRO, where I developed a deep learning–based anomaly detection system for network traffic using Python and TensorFlow. 
+                    I’ve also built projects like TrustPayHub (a secure payment platform) and a Password Manager. Skilled in C++, Python, JavaScript, and frameworks like React, Next.js, Node.js, and MongoDB, I actively practice coding with 700+ problems solved on LeetCode and GeeksforGeeks. 
+                    Beyond academics, I lead video editing for the Neon Club and conducted a workshop with 76 participants, balancing my technical work with leadership and creativity.
+                    <button onClick={() => setIsExpanded(false)} style={{ background: "none", border: "none", color: "#00b4db", cursor: "pointer", fontWeight: "bold", marginLeft: "0.5rem" }}>Read Less</button>
+                  </>
+                )}
+              </p>
               </div>
 
               {/* Social Media Links */}
