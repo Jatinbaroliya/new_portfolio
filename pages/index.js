@@ -334,7 +334,7 @@ export default function Home() {
             </div>
 
             {/* Bio and Socials */}
-            <div className="bio-socials md:ml-16 flex flex-col justify-center items-center">
+            <div className="bio-socials flex flex-col justify-center items-center">
               {/* Bio Text */}
               <div className="bio-text" style={{ 
                 background: "rgba(255, 255, 255, 0.05)", 
@@ -362,7 +362,7 @@ export default function Home() {
               </div>
 
               {/* Social Media Links */}
-              <div className="flex flex-row gap-6 justify-center mb-6" style={{ animation: "fadeIn 2s ease-out" }}>
+              <div className="flex flex-row gap-6 justify-center items-center mb-6" style={{ animation: "fadeIn 2s ease-out" }}>
                 <a
                   href="https://www.linkedin.com/in/jatin-baroliya-426b3b218/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   target="_blank"
@@ -458,8 +458,8 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen py-16 px-4 md:px-8 flex justify-center items-center" style={{ background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", color: "#ffffff"}}>
-        <div className="min-w-4/5 sm:min-w-lg md:min-w-xl lg:min-w-4xl max-w-6xl mx-auto">
-          <h1 className="section-heading text-center mb-12" style={{ fontSize: "3rem", fontWeight: "900", background: "linear-gradient(90deg, #00ffff, #8a2be2)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textShadow: "0 0 20px rgba(0, 255, 255, 0.7)"}}>Contact Me</h1>
+        <div className="mx-4 md:min-w-xl max-w-6xl">
+          <h1 className="section-heading text-center mb-12 [-webkit-text-stroke:0.7px_black]" style={{ fontSize: "3rem", fontWeight: "900", background: "linear-gradient(90deg, #00ffff, #8a2be2)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textShadow: "0 0 20px rgba(0, 255, 255, 0.7)"}}>Contact Me</h1>
           <div className="contact-form-container">
             <form className="w-full" onSubmit={handleSubmit} style={{
               background: "rgba(255, 255, 255, 0.1)",
